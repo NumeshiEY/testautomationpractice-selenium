@@ -4,6 +4,7 @@ import base.BaseClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 import java.util.Objects;
@@ -12,6 +13,7 @@ public class Page1 extends BaseClass {
 
     public Page1(WebDriver driver){
         super(driver);
+        PageFactory.initElements(driver, this);
     }
 
     @FindBy(id = "name")

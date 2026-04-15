@@ -18,7 +18,7 @@ public class TestBase {
     public void setUp(){
         WebDriverManager.edgedriver().setup();
         driver = new EdgeDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofDays(waitTime));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(waitTime));
         driver.get("https://testautomationpractice.blogspot.com/");
         driver.manage().window().maximize();
     }
